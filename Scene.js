@@ -85,7 +85,7 @@ class Scene {
         }));
 
         /*3*/
-        s.UIElements.push(Makers.makeButton(0.75, 0.02, 0.1, 0.05, "Sell", false,
+        s.UIElements.push(Makers.makeButton(0.75, 0.02, 0.1, 0.05, "出售", false,
             (ctx) => {
                 ctx.fillStyle = "#00FF00";
                 ctx.strokeStyle = "#001000";
@@ -197,11 +197,11 @@ class Scene {
         }, (scene) => {
             var obj = Makers.makeBuilding(scene.data.objectOptions[scene.data.placeObject]);
             if (obj.type.includes("PFMK")) {
-                return "Output-per-side: " + numToDisplayString(obj.output) + " Speed: " + obj.speed + " Restock: $" + numToDisplayString(obj.restock) + " Build: $" + numToDisplayString(obj.cost);
+                return "Output-per-side: " + numToDisplayString(obj.output) + " 速度: " + obj.speed + " 补货: $" + numToDisplayString(obj.restock) + " 建造: $" + numToDisplayString(obj.cost);
             } else if (obj.type.includes("GCFMK")) {
-                return "Output: " + numToDisplayString(obj.output) + " Speed: " + obj.speed + " Processors-Per-Card: " + numToDisplayString(obj.required) + " Build: $" + numToDisplayString(obj.cost);
+                return "输出: " + numToDisplayString(obj.output) + " 速度: " + obj.speed + " 每张显卡处理器数: " + numToDisplayString(obj.required) + " 建造: $" + numToDisplayString(obj.cost);
             } else if (obj.type.includes("MMK")) {
-                return "Sell Rate: " + obj.speed + " Price Multiplier: " + obj.multi + " Build: $" + numToDisplayString(obj.cost);
+                return "出售率: " + obj.speed + " 价格乘数: " + obj.multi + " 建造: $" + numToDisplayString(obj.cost);
             }
 
         }));
@@ -230,7 +230,7 @@ class Scene {
         /*9*/
         s.UIElements.push(Makers.makeUIImage(0, 0, 1, 1, Makers.makeAnimation("", "", ["Help"], 0), false));
         /*10ish -- Gets removed on click*/
-        s.UIElements.push(Makers.makeButton(0.4, 0.4, 0.2, 0.07 * 1.77, "Start", true,
+        s.UIElements.push(Makers.makeButton(0.4, 0.4, 0.2, 0.07 * 1.77, "开始", true,
             (ctx) => {
                 ctx.fillStyle = "#33cc33";
                 ctx.strokeStyle = "#003300";
