@@ -115,7 +115,7 @@ class SceneRender {
             ctx.shadowBlur = 2;
             ctx.shadowOffsetX = 3;
             ctx.shadowOffsetY = 3;
-            ctx.fillText(scene.data.placeMode ? "Build" : "Remove", 10 + mPos.x * cWidth, 10 + mPos.y * cHeight);
+            ctx.fillText(scene.data.placeMode ? "建造" : "移除", 10 + mPos.x * cWidth, 10 + mPos.y * cHeight);
             ctx.restore();
         }
 
@@ -123,7 +123,7 @@ class SceneRender {
             bufferCtx.font = "18px serif";
             bufferCtx.fillStyle = "#000000";
             bufferCtx.textAlign = "center";
-            bufferCtx.fillText(!scene.data.showHelp ? "H for Help" : "H to Close", 0.945 * cWidth, 0.89 * cHeight);
+            bufferCtx.fillText(!scene.data.showHelp ? "按 H 打开帮助" : "按 H 关闭", 0.945 * cWidth, 0.89 * cHeight);
         }
 
 

@@ -96,7 +96,7 @@ function nextFrame() {
             bufferCtx.font = "18px serif";
             bufferCtx.fillStyle = "#000000";
             bufferCtx.textAlign = "center";
-            bufferCtx.fillText("Toggle M:", 0.945 * cWidth, 0.92 * cHeight);
+            bufferCtx.fillText("切换 M:", 0.945 * cWidth, 0.92 * cHeight);
             bufferCtx.font = "22px serif";
             bufferCtx.fillText(sounds.isActive ? "🔊" : "🔈", 0.925 * cWidth, 0.95 * cHeight);
             bufferCtx.fillText(music ? "🎵" : "𝄺", 0.965 * cWidth, 0.95 * cHeight);

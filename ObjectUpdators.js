@@ -27,7 +27,7 @@ class Updater {
                     sounds.playSound("Blip2");
                     scene.gameobjects.push(Makers.makeIndicator("-$" + numToDisplayString(o.building.restock), mPos.x * cWidth, mPos.y * cHeight, 0, -1, "#EE0000", 10));
                 } else {
-                    scene.gameobjects.push(Makers.makeIndicator("No Connected Fabricators", mPos.x * cWidth, mPos.y * cHeight, 0, -1, "#EE0000", 10));
+                    scene.gameobjects.push(Makers.makeIndicator("没有连接的制造商", mPos.x * cWidth, mPos.y * cHeight, 0, -1, "#EE0000", 10));
                     sounds.playSound("Nope");
                 }
 
