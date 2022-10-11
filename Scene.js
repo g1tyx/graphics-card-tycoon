@@ -168,15 +168,15 @@ class Scene {
             ctx.shadowOffsetY = 3;
         }, (scene) => {
             var options = ["PFMK1", "PFMK2", "PFMK3", "GCFMK1", "GCFMK2", "GCFMK3", "MMK1", "MMK2", "MMK3"]
-            var names = ["Processor Factory Mk1",
-                "Processor Factory Mk2",
-                "Processor Factory Mk3",
-                "Graphics Card Fabricator Mk1",
-                "Graphics Card Fabricator Mk2",
-                "Graphics Card Fabricator Mk3",
-                "Market Mk1",
-                "Market Mk2",
-                "Market Mk3"
+            var names = ["处理器工厂 Mk1",
+                "处理器工厂 Mk2",
+                "处理器工厂 Mk3",
+                "显卡制造商 Mk1",
+                "显卡制造商 Mk2",
+                "显卡制造商 Mk3",
+                "市场 Mk1",
+                "市场 Mk2",
+                "市场 Mk3"
             ]
             return names[options.indexOf(scene.data.objectOptions[scene.data.placeObject])];
         }));
@@ -197,7 +197,7 @@ class Scene {
         }, (scene) => {
             var obj = Makers.makeBuilding(scene.data.objectOptions[scene.data.placeObject]);
             if (obj.type.includes("PFMK")) {
-                return "Output-per-side: " + numToDisplayString(obj.output) + " 速度: " + obj.speed + " 补货: $" + numToDisplayString(obj.restock) + " 建造: $" + numToDisplayString(obj.cost);
+                return "每面输出: " + numToDisplayString(obj.output) + " 速度: " + obj.speed + " 补货: $" + numToDisplayString(obj.restock) + " 建造: $" + numToDisplayString(obj.cost);
             } else if (obj.type.includes("GCFMK")) {
                 return "输出: " + numToDisplayString(obj.output) + " 速度: " + obj.speed + " 每张显卡处理器数: " + numToDisplayString(obj.required) + " 建造: $" + numToDisplayString(obj.cost);
             } else if (obj.type.includes("MMK")) {
@@ -222,9 +222,9 @@ class Scene {
         }, (scene) => {
             if (scene.data.tasks.length > 0) {
                 var task = scene.data.tasks[0];
-                return "Task: For $" + numToDisplayString(task.reward) + ", " + task.text;
+                return "任务: 获得 $" + numToDisplayString(task.reward) + ", " + task.text;
             }
-            return "All Tasks Completed.";
+            return "已完成所有任务.";
         }));
         //This image has to be in this location in the array
         /*9*/
@@ -268,18 +268,18 @@ class Scene {
             removeMode: false,
             cardPrice: 10,
             tasks: [
-                { id: 0, text: "Fabricate A Graphics Card.", reward: 20 },
-                { id: 1, text: "Build 3 More Graphics Card Fabricators Mk1s.", reward: 30 },
-                { id: 2, text: "Build 4 More Processor Factory Mk1s.", reward: 40 },
-                { id: 3, text: "Build A Market Mk1.", reward: 50 },
-                { id: 4, text: "Construct A Processor Factory Mk2.", reward: 500 },
-                { id: 5, text: "Construct 4 Graphics Card Fabricators Mk2.", reward: 4000 },
-                { id: 6, text: "Build A Market Mk2.", reward: 5000 },
-                { id: 7, text: "Construct A Processor Factory Mk3.", reward: 50000 },
-                { id: 8, text: "Construct 4 Graphics Card Fabricators Mk3.", reward: 500000 * 4 },
-                { id: 9, text: "Earn $1.00M", reward: 3000000 },
-                { id: 10, text: "Build A Market Mk3.", reward: 5000000 },
-                { id: 11, text: "Earn $1.00B", reward: 1000000000 }
+                { id: 0, text: "制作一张显卡.", reward: 20 },
+                { id: 1, text: "再制造 3 台显卡制造商 Mk1。", reward: 30 },
+                { id: 2, text: "再建造 4 个处理器工厂 Mk1.", reward: 40 },
+                { id: 3, text: "建造一个市场 Mk1.", reward: 50 },
+                { id: 4, text: "建造 处理器工厂 Mk2.", reward: 500 },
+                { id: 5, text: "建造 4 显卡制造商 Mk2.", reward: 4000 },
+                { id: 6, text: "建造一个市场 Mk2.", reward: 5000 },
+                { id: 7, text: "建造一个处理器工厂 Mk3.", reward: 50000 },
+                { id: 8, text: "建造 4 显卡制造商 Mk3.", reward: 500000 * 4 },
+                { id: 9, text: "赚取 $1.00M", reward: 3000000 },
+                { id: 10, text: "建造一个市场 Mk3.", reward: 5000000 },
+                { id: 11, text: "赚取 $1.00B", reward: 1000000000 }
             ],
             showHelp: false,
             start: true
